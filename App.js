@@ -10,23 +10,15 @@ export default function App() {
     return (
         <View style={styles.background}>
             <View style={styles.container}>
-                <Text style={styles.title}>Member Login</Text>
+                <Text style={styles.title}>Register</Text>
+                <TextInput placeholder="Full Name" placeholderTextColor="#fff" style={styles.input}></TextInput>
+                <TextInput placeholder="Username" placeholderTextColor="#fff" style={styles.input}></TextInput>
                 <TextInput placeholder="Email" placeholderTextColor="#fff" style={styles.input}></TextInput>
                 <TextInput secureTextEntry={true} placeholder="Password" placeholderTextColor="#fff" style={styles.input}></TextInput>
+                <TextInput secureTextEntry={true} placeholder="Confirm Password" placeholderTextColor="#fff" style={styles.input}></TextInput>
                 <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Sign in</Text>
+                    <Text style={styles.buttonText}>Submit</Text>
                 </TouchableOpacity>
-                <View style={styles.extendedFeature}>
-                    <View style={styles.remember}>
-                        <TouchableOpacity style={styles.checkBox} onPress={toggleCheckBox}>
-                            {isChecked && <Text style={styles.checkMark}>✓</Text>}
-                        </TouchableOpacity>
-                        <Text style={styles.rememberText}>Remember me</Text>
-                    </View>
-                    <View style={styles.forgot}>
-                        <Text style={styles.forgotText}>Forgot password?</Text>
-                    </View>
-                </View>
             </View>
         </View>
     );
@@ -76,44 +68,5 @@ const styles = StyleSheet.create({
     buttonText: {
         color: "#fff",
         fontSize: 25,
-    },
-    extendedFeature: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        width: 300,
-        marginTop: 60,
-    },
-    remember: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    checkBox: {
-        width: 35,
-        height: 35,
-        backgroundColor: "#000",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    checkMark: {
-        color: "#2fbce7",
-        fontSize: 30,
-        fontWeight: "bold",
-    },
-    rememberText: {
-        fontSize: 15,
-        marginLeft: 5,
-        textAlign: "left",
-    },
-    forgot: {
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-    },
-    forgotText: {
-        fontSize: 15,
-        textAlign: "right",
     },
 });
